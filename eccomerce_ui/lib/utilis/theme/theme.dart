@@ -1,4 +1,10 @@
+import 'package:eccomerce_ui/utilis/theme/custom_themes/appbar_theme.dart';
+import 'package:eccomerce_ui/utilis/theme/custom_themes/bottom_sheet_theme.dart';
+import 'package:eccomerce_ui/utilis/theme/custom_themes/checkbox_theme.dart';
+import 'package:eccomerce_ui/utilis/theme/custom_themes/chip_theme.dart';
 import 'package:eccomerce_ui/utilis/theme/custom_themes/elevated_button_theme.dart';
+import 'package:eccomerce_ui/utilis/theme/custom_themes/outlined_buttton_theme.dart';
+import 'package:eccomerce_ui/utilis/theme/custom_themes/text_field_theme.dart';
 import 'package:eccomerce_ui/utilis/theme/custom_themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +19,13 @@ static ThemeData lightTheme = ThemeData(
  scaffoldBackgroundColor: Colors.white,
  textTheme: TTextTheme.lightTextTheme,
  elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
+ bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
+ appBarTheme: TAppBarTheme.lightAppBarTheme,
+ outlinedButtonTheme: TOutlineButtonTheme.lightOutlineButtonTheme,
+ inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
+ chipTheme: TChipTheme.lightChipTheme,
+ checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
+
 );
 static ThemeData darkTheme = ThemeData(
   useMaterial3: true,
@@ -22,6 +35,11 @@ static ThemeData darkTheme = ThemeData(
   scaffoldBackgroundColor: Colors.black,
   textTheme: TTextTheme.darkTextTheme,
   elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
-
+   bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
+ appBarTheme: TAppBarTheme.darkAppBarTheme,
+ outlinedButtonTheme: TOutlineButtonTheme.darkOutlineButtonTheme,
+ inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
+ chipTheme: TChipTheme.darkChipTheme,
+ checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
 );
 }
