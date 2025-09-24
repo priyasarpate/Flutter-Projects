@@ -14,14 +14,18 @@ dependencies:
 
 
 #----------------Utility Packages-----------------#
-
+  http: ^1.1.0 
+  intl: ^0.18.1 
+  logger: ^1.2.0 
+  url_launcher: ^6.2.1 
+  
 #----------------Icons-----------------#
   cupertino_icons: ^1.0.8
 
 
 #----------------State Management-----------------#
-
-
+  get: ^4.6.5 
+  get_storage: ^2.1.1
 #----------------Product Specification-----------------#
 
 
