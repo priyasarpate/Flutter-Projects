@@ -1,4 +1,3 @@
-import 'package:eccomerce_ui/utilis/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'app.dart';
 
