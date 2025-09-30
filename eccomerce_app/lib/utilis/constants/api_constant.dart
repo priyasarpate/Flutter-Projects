@@ -1,6 +1,0 @@
-
-
-class TApiConstant {
-  TApiConstant ._();
-
-}
