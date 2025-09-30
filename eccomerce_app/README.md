@@ -1,4 +1,4 @@
-# eccomerce_ui
+# eccomerce_app
 
 A new Flutter project.
 
