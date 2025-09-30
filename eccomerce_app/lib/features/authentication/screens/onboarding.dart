@@ -1,3 +1,4 @@
+//Onboarding design file
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -5,6 +6,26 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: Stack(
+        children: [
+          //Horizontal scrollabl pages
+            PageView(
+              children: [
+                Column(
+                  children: [
+                    //Image(image: image)
+                  ],
+                )
+              ],
+            )
+          //Skip Button
+
+          //Dot navigation switch page indicator
+
+          //Circular button
+        ],
+      ),
+    );
   }
 }
