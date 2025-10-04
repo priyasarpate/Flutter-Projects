@@ -1,4 +1,3 @@
-// Onboarding design file
 import 'package:eccomerce_ui/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:eccomerce_ui/utils/constants/image_strings.dart';
@@ -13,50 +12,72 @@ class OnBoardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Horizontal scrollable pages
+          // Horizontal scrollable pages with PageView
           PageView(
-            children: [
-              // First onboarding page
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center, // Add this
-                children: [
-                  Image(
-                    width:
-                        THelperFunctions.screenWidth() *
-                        0.6, // Reduced from 0.8
-                    height:
-                        THelperFunctions.screenHeight() *
-                        0.4, // Reduced from 0.6
-                    image: AssetImage(TImages.onBoardingImage1),
-                  ),
-                  const SizedBox(height: TSizes.spaceBtwItems),
-                  Text(
-                    TText
-                        .onboardingTitle1, 
-                    style: Theme.of(context).textTheme.headlineMedium,
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: TSizes.spaceBtwItems),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: TSizes.defaultSpace,
-                    ),
-                    child: Text(
-                      TText.onboardingSubTitle1,
-                      style: Theme.of(context).textTheme.bodyMedium,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ],
+            children: const [
+              OnBoardingPage(
+                image: TImages.onBoardingImage1,
+                title: TText.onboardingTitle1,
+                subTitle: TText.onboardingSubTitle1,
+              ),
+              OnBoardingPage(
+                image: TImages.onBoardingImage2,
+                title: TText.onboardingTitle2,
+                subTitle: TText.onboardingSubTitle2,
+              ),
+              OnBoardingPage(
+                image: TImages.onBoardingImage3,
+                title: TText.onboardingTitle3,
+                subTitle: TText.onboardingSubTitle3,
               ),
             ],
           ),
 
-          // Skip Button
+          // Skip Button (to be implemented)
 
-          // Dot navigation switch page indicator
+          // Dot navigation switch page indicator (to be implemented)
 
-          // Circular button
+          // Circular button (to be implemented)
+        ],
+      ),
+    );
+  }
+}
+
+class OnBoardingPage extends StatelessWidget {
+  const OnBoardingPage({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.subTitle,
+  });
+
+  final String image, title, subTitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(TSizes.defaultSpace),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image(
+            width: THelperFunctions.screenWidth() * 0.6,
+            height: THelperFunctions.screenHeight() * 0.4,
+            image: AssetImage(image),
+          ),
+          const SizedBox(height: TSizes.spaceBtwItems),
+          Text(
+            title,
+            style: Theme.of(context).textTheme.headlineMedium,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: TSizes.spaceBtwItems),
+          Text(
+            subTitle,
+            style: Theme.of(context).textTheme.bodyMedium,
+            textAlign: TextAlign.center,
+          ),
         ],
       ),
     );
