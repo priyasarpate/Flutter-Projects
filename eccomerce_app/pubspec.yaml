@@ -20,6 +20,7 @@ dependencies:
   url_launcher: ^6.2.1 
   flutter_native_splash: ^2.4.6
   smooth_page_indicator: ^1.1.0
+  iconsax: ^0.0.8 
   
 #----------------Icons-----------------#
   cupertino_icons: ^1.0.8

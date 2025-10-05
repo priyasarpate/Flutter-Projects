@@ -1,10 +1,10 @@
-import 'package:eccomerce_ui/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:eccomerce_ui/utils/constants/image_strings.dart';
-
+import 'package:eccomerce_ui/utils/constants/text_strings.dart';
 import 'widgets/onboarding_page.dart';
 import 'widgets/onboarding_skip.dart';
-
+import 'widgets/onboarding_dot_navigation.dart';
+import 'widgets/onboarding_next_button.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -38,11 +38,11 @@ class OnBoardingScreen extends StatelessWidget {
           // Skip Button (to be implemented)
           OnBoardingSkip(),
           // Dot navigation switch page indicator (to be implemented)
-
+          OnBoardingDotNavigation(),
           // Circular button (to be implemented)
+          OnBoradingNextButton(),
         ],
       ),
     );
   }
 }
-
