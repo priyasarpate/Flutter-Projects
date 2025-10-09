@@ -1,6 +1,7 @@
 //This is resuable controller file 
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import '../screens/login/login.dart';
 
 class OnboardingController extends GetxController{
 static OnboardingController get instance => Get.find();
@@ -26,7 +27,7 @@ void dotNavigationClick(index){
 //update current index and jump to the next page 
 void nextPage(){
 if (currentPageIndex.value == 2) {
-  //Get.to(LoginSCreen());
+  Get.to(LoginSCreen());
 } else {
   int page = currentPageIndex.value + 1;
   pageController.jumpToPage(page);

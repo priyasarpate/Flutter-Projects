@@ -5,6 +5,7 @@ import 'package:eccomerce_ui/utils/constants/sizes.dart';
 import 'package:eccomerce_ui/utils/constants/text_strings.dart';
 import 'package:eccomerce_ui/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class LoginSCreen extends StatelessWidget {
@@ -100,7 +101,6 @@ class LoginSCreen extends StatelessWidget {
                         child: Text(TTexts.tDontHaveAnAccount),
                       ),
                     ),
-                    const SizedBox(height: TSizes.spaceBtwSections),
                   ],
                 ),
               ),
@@ -109,9 +109,64 @@ class LoginSCreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Divider(color: dark ? TColors.darkGrey : TColors.grey, thickness: 0.5, indent: 60, endIndent: 5,)
+                Flexible(
+                  child: Divider(
+                    color: dark ? TColors.darkGrey : TColors.grey,
+                    thickness: 0.5,
+                    indent: 60,
+                    endIndent: 5,
+                  ),
+                ),
+                Text(
+                  TTexts.tOR.capitalize!,
+                  style: Theme.of(context).textTheme.labelMedium,
+                ),
+                Flexible(
+                  child: Divider(
+                    color: dark ? TColors.darkGrey : TColors.grey,
+                    thickness: 0.5,
+                    indent: 5,
+                    endIndent: 60,
+                  ),
+                ),
               ],
-            )
+            ),
+          const SizedBox(height: TSizes.spaceBtwSections),
+            //FOOTER
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: TColors.grey),
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Image(
+                      width: TSizes.iconMd,
+                      height: TSizes.iconMd,
+                      image: AssetImage(TImages.google),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: TSizes.spaceBtwItems),
+                  Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: TColors.grey),
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Image(
+                      width: TSizes.iconMd,
+                      height: TSizes.iconMd,
+                      image: AssetImage(TImages.facebook),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
