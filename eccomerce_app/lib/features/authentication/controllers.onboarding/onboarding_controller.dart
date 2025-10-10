@@ -27,7 +27,7 @@ void dotNavigationClick(index){
 //update current index and jump to the next page 
 void nextPage(){
 if (currentPageIndex.value == 2) {
-  Get.to(LoginSCreen());
+  Get.to(LoginScreen());
 } else {
   int page = currentPageIndex.value + 1;
   pageController.jumpToPage(page);
