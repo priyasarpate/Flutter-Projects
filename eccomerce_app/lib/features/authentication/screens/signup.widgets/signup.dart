@@ -1,10 +1,10 @@
+import 'package:eccomerce_ui/features/authentication/screens/signup.widgets/verify_email.dart';
 import 'package:eccomerce_ui/utils/constants/sizes.dart';
 import 'package:eccomerce_ui/utils/constants/text_strings.dart';
-import 'package:eccomerce_ui/utils/constants/colors.dart'; // Added for TColors.primary used in Terms/Conditions
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart'; 
-import '../../../../utils/helpers/helper_functions.dart';
+
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -102,8 +102,7 @@ class SignupScreen extends StatelessWidget {
                SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {}, 
-                      // Removed 'const' keyword, used appropriate TTexts string
+                      onPressed: () => Get.to(() => const VerifyEmailScreen()), 
                       child: Text(TTexts.tGetStarted), 
                     ),
                   ),
