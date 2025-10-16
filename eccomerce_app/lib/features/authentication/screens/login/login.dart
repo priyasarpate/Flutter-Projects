@@ -4,8 +4,8 @@ import 'package:eccomerce_ui/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'widgets/login_form.dart';
 import 'widgets/login_header.dart';
-import 'widgets/login_divider.dart';
-import 'widgets/social_buttons.dart';
+import '../../../../common/widgets.login_signup/login_divider.dart';
+import '../../../../common/widgets.login_signup/social_buttons.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
