@@ -168,4 +168,9 @@ class TTexts {
   // -- Dashboard 1
   static const String popularProducts = "Popular Products";
   static const String homeAppbarTitle = "Good day for shopping";
+
+// privacy privacy y
+static const String iAgreeTo = "I agree to";
+static const String privacyPolicy = "Privacy Policy";
+static const String termsOfUse = "Terms of Use";
 }
