@@ -1,3 +1,5 @@
+import 'package:eccomerce_ui/common/widgets.login_signup/login_divider.dart';
+import 'package:eccomerce_ui/common/widgets.login_signup/social_buttons.dart';
 import 'package:eccomerce_ui/features/authentication/screens/signup.widgets/verify_email.dart';
 import 'package:eccomerce_ui/utils/constants/colors.dart';
 import 'package:eccomerce_ui/utils/constants/sizes.dart';
@@ -169,6 +171,12 @@ class SignupScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(height: TSizes.spaceBtwSections),
+              //devider
+              TFormDivider(dark: dark),
+
+              //Socila buttons
+              const TScocialButtons(),
             ],
           ),
         ),

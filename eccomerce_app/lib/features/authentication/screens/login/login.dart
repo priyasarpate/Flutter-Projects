@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         padding: TSpacingStyle.paddingWithAppBarHeight,
-        child: Column(  // ← WRAP EVERYTHING IN COLUMN!
+        child: Column(  
           children: [
             TLoginHeader(dark: dark),
             //Form
