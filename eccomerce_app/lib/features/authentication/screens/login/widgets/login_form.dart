@@ -1,4 +1,4 @@
-import 'package:eccomerce_ui/features/authentication/screens/signup.widgets/signup.dart';
+import 'package:eccomerce_ui/features/authentication/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:eccomerce_ui/utils/constants/sizes.dart';
 import 'package:eccomerce_ui/utils/constants/text_strings.dart';

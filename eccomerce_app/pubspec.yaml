@@ -48,6 +48,7 @@ flutter:
   assets: 
     - assets/icons/brands/
     - assets/images/onboarding_images/
+    - assets/images/animations/
     - assets/logos/
 
   #----------------Local Fonts-----------------#
