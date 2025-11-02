@@ -1,3 +1,4 @@
+import 'package:eccomerce_ui/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:eccomerce_ui/features/authentication/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:eccomerce_ui/utils/constants/sizes.dart';
@@ -6,17 +7,13 @@ import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart';
 
 class TLoginForm extends StatelessWidget {
-  const TLoginForm({
-    super.key,
-  });
+  const TLoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: TSizes.spaceBtwSections,
-        ),
+        padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
         child: Column(
           children: [
             // Email
@@ -49,7 +46,7 @@ class TLoginForm extends StatelessWidget {
                 ),
                 //Forgot password
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const ForgetPassword()),
                   child: const Text(TTexts.tForgetPassword),
                 ),
               ],

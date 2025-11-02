@@ -28,7 +28,7 @@ class SuccessScreen extends StatelessWidget {
           children: [
             //images
             Image(
-              image: AssetImage(TImages.verifyEmail),
+              image: AssetImage(TImages.onBoardingImage1),
               width: THelperFunctions.screenWidth() * 0.6,
             ),
             const SizedBox(height: TSizes.spaceBtwSections),
