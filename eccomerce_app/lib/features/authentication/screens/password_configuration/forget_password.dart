@@ -1,7 +1,9 @@
+import 'package:eccomerce_ui/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:eccomerce_ui/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../utils/constants/text_strings.dart';
+import 'package:get/get.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
@@ -29,9 +31,15 @@ class ForgetPassword extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwItems),
             //Text feild
             TextFormField(
-              decoration: const InputDecoration(labelText: TTexts.email, prefixIcon: Icon(Iconsax.direct_right) ),
-            )
+              decoration: const InputDecoration(
+                labelText: TTexts.email,
+                prefixIcon: Icon(Iconsax.direct_right),
+              ),
+            ),
+            const SizedBox(height: TSizes.spaceBtwItems),
+
             //Submit button
+            SizedBox(width: double.infinity, child: ElevatedButton (onPressed: () => Get.to(() => const ResetPassword()), child: const Text(TTexts.submit))),
           ],
         ),
       ),
