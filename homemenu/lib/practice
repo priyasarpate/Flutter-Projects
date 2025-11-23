@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const RecipeBookApp());
+}
+
+class RecipeBookApp extends StatelessWidget {
+  const RecipeBookApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Recipe Book', 
+      theme: ThemeData(
+        primarySwatch: Colors.deepOrange, 
+        useMaterial3: true,
+      ),
+      home: const RecipeHomeScreen(),
+    );
+  }
+}
+
+class RecipeHomeScreen extends StatelessWidget {
+  const RecipeHomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Recipe Book', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.deepOrange,
+      ),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, 
+          children: <Widget>[
+            Icon(
+              Icons.menu_book,
+              size: 80,
+              color: Colors.deepOrange,
+            ),
+            SizedBox(height: 20), 
+            Text(
+              'Welcome to your Recipe Book!',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepOrange,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Start adding your favorite dishes.',
+              style: TextStyle(fontSize: 16, color: Colors.grey),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
