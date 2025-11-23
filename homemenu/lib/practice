@@ -1,61 +1,129 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const RecipeBookApp());
-}
-
-class RecipeBookApp extends StatelessWidget {
-  const RecipeBookApp({super.key});
+class Ingradient extends StatelessWidget {                    // ← Class OPENS {
+  const Ingradient({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Recipe Book', 
-      theme: ThemeData(
-        primarySwatch: Colors.deepOrange, 
-        useMaterial3: true,
-      ),
-      home: const RecipeHomeScreen(),
-    );
-  }
-}
-
-class RecipeHomeScreen extends StatelessWidget {
-  const RecipeHomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Recipe Book', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.deepOrange,
-      ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, 
-          children: <Widget>[
-            Icon(
-              Icons.menu_book,
-              size: 80,
-              color: Colors.deepOrange,
-            ),
-            SizedBox(height: 20), 
-            Text(
-              'Welcome to your Recipe Book!',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.deepOrange,
-              ),
-            ),
+  Widget build(BuildContext context) {                        // ← build method OPENS {
+    return Scaffold(                                          // ← Scaffold OPENS (
+      appBar: AppBar(                                         //   ← AppBar OPENS (
+        backgroundColor: Colors.amber,
+        title: Text('Mahfil biryani'),
+      ),                                                      //   ← AppBar CLOSES )
+      
+      body: Padding(                                          //   ← Padding OPENS (
+        padding: const EdgeInsets.all(16.0),
+        
+        child: ListView(                                      //     ← ListView OPENS (
+          children: [                                         //       ← List OPENS [
+            
+            Container(                                        //         ← Container OPENS (
+              width: double.infinity,
+              height: 150,
+              decoration: BoxDecoration(                      //           ← BoxDecoration OPENS (
+                borderRadius: BorderRadius.circular(12),
+                image: DecorationImage(                       //             ← DecorationImage OPENS (
+                  image: AssetImage('assets/mahfil_biryani.jpg'),
+                  fit: BoxFit.cover,
+                ),                                            //             ← DecorationImage CLOSES )
+              ),                                              //           ← BoxDecoration CLOSES )
+            ),                                                //         ← Container CLOSES )
+            
+            SizedBox(height: 16),                             //         ← SizedBox (opens and closes in one line)
+            
+            Text(                                             //         ← Text OPENS (
+              'Hyderabadi style mahfil biryani',
+              style: TextStyle(                               //           ← TextStyle OPENS (
+                fontSize: 20, 
+                fontWeight: FontWeight.bold
+              ),                                              //           ← TextStyle CLOSES )
+            ),                                                //         ← Text CLOSES )
+            
+            SizedBox(height: 20),
+          
+            Text(                                             //         ← Text OPENS (
+              'Ingredients',
+              style: TextStyle(                               //           ← TextStyle OPENS (
+                fontSize: 20,
+                fontWeight: FontWeight.w700
+              ),                                              //           ← TextStyle CLOSES )
+            ),                                                //         ← Text CLOSES )
+            
             SizedBox(height: 10),
-            Text(
-              'Start adding your favorite dishes.',
-              style: TextStyle(fontSize: 16, color: Colors.grey),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+
+            IngredientRow(icon: '🍗', name: 'Chicken (70-80g pieces)', quantity: '1 kg'),
+            IngredientRow(icon: '🧂', name: 'Salt (Rock Salt)', quantity: '1 Tbsp'),
+            IngredientRow(icon: '🌶️', name: 'Red Chili Powder', quantity: '2 Tbsp'),
+            IngredientRow(icon: '🧄', name: 'Ginger-Garlic Paste', quantity: '1.5 Tbsp'),
+            IngredientRow(icon: '🌿', name: 'Coriander Leaves', quantity: '1/2 cup'),
+            IngredientRow(icon: '✨', name: 'Chota Garam Masala', quantity: 'As prepared'),
+            IngredientRow(icon: '🟡', name: 'Saffron (Kesar)', quantity: '0.5 gram'),
+            IngredientRow(icon: '🍋', name: 'Lemon Juice', quantity: '1 whole'),
+            IngredientRow(icon: '🧅', name: 'Fried Onions', quantity: '1 handful'),
+            IngredientRow(icon: '🥛', name: 'Curd (Yogurt)', quantity: '200 grams'),
+            IngredientRow(icon: '🍃', name: 'Methi (Fenugreek Leaves)', quantity: '1/4 cup'),  
+            IngredientRow(icon: '🌶️', name: 'Secret Masala Paste', quantity: 'Entire quantity'),
+            IngredientRow(icon: '🛢️', name: 'Oil', quantity: '150 ml'),
+            IngredientRow(icon: '🧈', name: 'Ghee', quantity: 'Added at end'),
+            IngredientRow(icon: '💧', name: 'Hot Water', quantity: '100-150 ml'),
+
+          ],                                                  //       ← List CLOSES ]
+        ),                                                    //     ← ListView CLOSES )
+      ),                                                      //   ← Padding CLOSES )
+    );                                                        // ← Scaffold CLOSES )
+  }                                                           // ← build method CLOSES }
+}                                                             // ← Class CLOSES }
+
+// ======================================================
+// NEW CLASS STARTS HERE (AFTER THE } ABOVE)
+// ======================================================
+
+class IngredientRow extends StatelessWidget {                // ← Class OPENS {
+  final String icon;
+  final String name;
+  final String quantity;
+
+  const IngredientRow({                                       // ← Constructor OPENS (
+    super.key,
+    required this.icon,
+    required this.name,
+    required this.quantity,
+  });                                                         // ← Constructor CLOSES )
+
+  @override
+  Widget build(BuildContext context) {                        // ← build method OPENS {
+    return Padding(                                           //   ← Padding OPENS (
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      
+      child: Row(                                             //     ← Row OPENS (
+        children: [                                           //       ← List OPENS [
+          
+          Text(                                               //         ← Text OPENS (
+            icon, 
+            style: TextStyle(fontSize: 24)
+          ),                                                  //         ← Text CLOSES )
+          
+          SizedBox(width: 16),
+          
+          Expanded(                                           //         ← Expanded OPENS (
+            child: Text(                                      //           ← Text OPENS (
+              name,
+              style: TextStyle(fontSize: 16),
+            ),                                                //           ← Text CLOSES )
+          ),                                                  //         ← Expanded CLOSES )
+          
+          SizedBox(width: 16),
+          
+          Text(                                               //         ← Text OPENS (
+            quantity,
+            style: TextStyle(                                 //           ← TextStyle OPENS (
+              fontSize: 16, 
+              color: Colors.grey
+            ),                                                //           ← TextStyle CLOSES )
+          ),                                                  //         ← Text CLOSES )
+          
+        ],                                                    //       ← List CLOSES ]
+      ),                                                      //     ← Row CLOSES )
+    );                                                        //   ← Padding CLOSES )
+  }                                                           // ← build method CLOSES }
+}                                                             // ← Class CLOSES }
