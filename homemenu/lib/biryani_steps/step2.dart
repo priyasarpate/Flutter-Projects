@@ -24,6 +24,7 @@ class Step2 extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     height: 400,
+
                     child: PageView.builder(
                       itemCount: imageAssets.length,
                       itemBuilder: (context, index) {
@@ -39,11 +40,13 @@ class Step2 extends StatelessWidget {
                             ),
                           ),
                         );
+
                       },
                     ),
                   ),
 
                   const SizedBox(height: 16),
+                  
                   const Text(
                     'B. First Stage of Chicken Marination',
                     style: TextStyle(
@@ -52,7 +55,14 @@ class Step2 extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 10),
+              const SizedBox(height: 16),
+             Center(
+              child: const Text(
+                'Mix/massage well until all the spices thoroughly coat the chicken.',
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(height: 30),
 
                   IngredientRow(icon: '🍗', name: 'chicken', quantity: '1 kg'),
                   IngredientRow(icon: '🧂', name: 'salt', quantity: '2 Tbsp'),
