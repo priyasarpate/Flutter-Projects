@@ -30,7 +30,7 @@ flutter:
 
   #----------------Local Assets-----------------#
   assets:
-    - assets/1kg chicekn.png
+    - assets/1kg_chicken.png
     - assets/boiling_sauce.jpg
     - assets/chicken.jpg
     - assets/chota_masala.jpg
