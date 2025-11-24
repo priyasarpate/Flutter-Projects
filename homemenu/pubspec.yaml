@@ -41,12 +41,14 @@ flutter:
     - assets/secreat_sauce.jpg
     - assets/oil_ghee.jpg
     - assets/marination.jpg
+    - assets/main_marination.jpg
     - assets/mahfil_biryani.jpg
     - assets/layring.jpg
-    - assets/frying_oinion .jpg
+    - assets/frying_onion.jpg
     - assets/fined_sauce.jpg
     - assets/dum.jpg
     - assets/done.jpg
+    - assets/cooking.jpg
 
 
 
