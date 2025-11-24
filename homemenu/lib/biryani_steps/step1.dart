@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './step2.dart';
 
 class Step1 extends StatelessWidget {
   const Step1({super.key});
@@ -54,10 +55,33 @@ class Step1 extends StatelessWidget {
 
             IngredientRow(icon: '🌰', name: 'cloves', quantity: '4'),
             IngredientRow(icon: '🪵', name: 'cinnamon stick', quantity: '2'),
+            IngredientRow(
+              icon: '🟤',
+              name: 'Shahjeera (Caraway Seeds)',
+              quantity: '1/2 tsp',
+            ),
 
-//fixed button
-
-
+            //fixed button
+           Padding(
+             padding: const EdgeInsets.all(16.0),
+             child: SizedBox(
+              width: double.infinity,
+              height: 50,
+               child: ElevatedButton(onPressed: () {
+               Navigator.push(context,
+               MaterialPageRoute(builder: (context) => Step2()),
+               );
+                },
+                style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.amber,
+                shape: RoundedRectangleBorder(
+                 borderRadius: BorderRadius.circular(16)
+                ),
+                 ),
+                  child: Text('Step2'),
+                  ),
+             ),
+           )
           ],
         ),
       ),

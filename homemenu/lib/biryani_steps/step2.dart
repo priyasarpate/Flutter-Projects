@@ -5,6 +5,8 @@ class Step2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Text('This is Step 2'),
+    );
   }
 }
