@@ -34,7 +34,7 @@ class Ingradient extends StatelessWidget {
             SizedBox(height: 20),
 
             Text(
-              'Ingredients',
+              'Ingredients list',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
 
@@ -106,6 +106,9 @@ class Ingradient extends StatelessWidget {
         ),
       ),
     );
+
+    //fixed button
+    
   }
 }
 
