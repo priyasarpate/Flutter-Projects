@@ -1,3 +1,4 @@
+import 'package:eccomerce_ui/features/shop/screens/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -9,6 +10,7 @@ class NavigationMenu extends StatelessWidget {
   Widget build(BuildContext context) {
 
  final controller = Get.put(NavigationController());
+
 
     return Scaffold(
     bottomNavigationBar: Obx(
@@ -34,5 +36,5 @@ class NavigationMenu extends StatelessWidget {
   class NavigationController extends GetxController {
     final Rx<int> selectedIndex = 0.obs;
      
-    final screens = [Container(color: Colors.amber), Container(color: Colors.blue), Container(color: Colors.green), Container(color: Colors.amber),];
+    final screens = [const HomeScreen(), Container(color: Colors.blue), Container(color: Colors.green), Container(color: Colors.amber),];
   }
