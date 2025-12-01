@@ -13,6 +13,20 @@ class HomeScreen extends StatelessWidget {
               Container(
                 color: TColors.primary,
                 padding: EdgeInsets.all(0),
+                // let's create a shapes
+                child: Stack(
+                  children: [
+                    Container(
+                    width: 400,
+                    height: 400,
+                    padding: const EdgeInsets.all(0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(400),
+                      color: TColors.textWhite.withOpacity(0.1),
+                    ),
+                    ),
+                  ],
+                ),
               )
             ],
           ),
