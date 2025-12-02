@@ -34,14 +34,14 @@ class Ingradient extends StatelessWidget {
                     'Hyderabadi style mahfil biryani',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
-            
+
                   SizedBox(height: 20),
-            
+
                   Text(
                     'Ingredients list',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                   ),
-            
+
                   SizedBox(height: 10),
                   IngredientRow(
                     icon: '🍗',
@@ -78,7 +78,11 @@ class Ingradient extends StatelessWidget {
                     name: 'Saffron (Kesar)',
                     quantity: '0.5 gram',
                   ),
-                  IngredientRow(icon: '🍋', name: 'Lemon Juice', quantity: '1 whole'),
+                  IngredientRow(
+                    icon: '🍋',
+                    name: 'Lemon Juice',
+                    quantity: '1 whole',
+                  ),
                   IngredientRow(
                     icon: '🧅',
                     name: 'Fried Onions',
@@ -100,7 +104,11 @@ class Ingradient extends StatelessWidget {
                     quantity: 'Entire quantity',
                   ),
                   IngredientRow(icon: '🛢️', name: 'Oil', quantity: '150 ml'),
-                  IngredientRow(icon: '🧈', name: 'Ghee', quantity: 'Added at end'),
+                  IngredientRow(
+                    icon: '🧈',
+                    name: 'Ghee',
+                    quantity: 'Added at end',
+                  ),
                   IngredientRow(
                     icon: '💧',
                     name: 'Hot Water',
@@ -111,43 +119,46 @@ class Ingradient extends StatelessWidget {
             ),
           ),
 
-            //fixed button
-
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: SizedBox(
-                width: double.infinity,
-                height: 50,
-                child: ElevatedButton(onPressed: () {
-                Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Step1())
+          //fixed button
+          Padding(
+            padding: EdgeInsets.only(
+              left: 16,
+              right: 16,
+              bottom: MediaQuery.of(context).padding.bottom + 16,
+              top: 16,
+            ),
+            child: SizedBox(
+              width: double.infinity,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Step1()),
                   );
                 },
 
-               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.amber,
-                shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.amber,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
-               ),
 
-                child: Text('start cooking',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-                ),
-                
+                child: Text(
+                  'start cooking',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ),
+          ),
         ],
       ),
     );
-
-  
-    
   }
 }
 

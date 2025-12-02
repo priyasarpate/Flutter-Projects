@@ -68,8 +68,7 @@ class Step6 extends StatelessWidget {
                   const IngredientRow(icon: '🧈', name: 'Drizzle 2 Tbsp of ghee over the top layer of rice'),   // 🧈 for Ghee/Butter
                   const IngredientRow(icon: '🛡️', name: 'Seal the pot tightly with silver foil'),              // 🛡️ for Sealing/Protection
                   const IngredientRow(icon: '🔥', name: 'Cook on high flame for exactly 5 minutes.'),              // 🔥 for High Heat/Flame
-                  const IngredientRow(icon: '🧱', name: 'Place a heavy tawa/pan on the stove, set the biryani pot on top of it, and cook on dum for 20 minutes '),           // 🧱 for Heavy/Solid Base (Tawa)
-                  const IngredientRow(icon: '⏳', name: 'Place a heavy tawa/pan on the stove, set the biryani pot on top of it, and cook on dum for 20 minutes '),           // ⏳ for Time/Duration (Dum period)
+                  const IngredientRow(icon: '🧱', name: 'Place a heavy tawa/pan on the stove, set the biryani pot on top of it, and cook on dum for 20 minutes '),          
                 ],
               ),
                   
@@ -79,7 +78,12 @@ class Step6 extends StatelessWidget {
             ),
             
             Padding(
-              padding: const EdgeInsets.only(top: 16.0), 
+ padding: EdgeInsets.only(
+              left: 16,
+              right: 16,
+              bottom: MediaQuery.of(context).padding.bottom + 16,
+              top: 16,
+            ),
               child: SizedBox(
                 width: double.infinity,
                 height: 50,

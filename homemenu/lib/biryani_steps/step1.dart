@@ -63,7 +63,12 @@ class Step1 extends StatelessWidget {
 
             //fixed button
            Padding(
-             padding: const EdgeInsets.all(16.0),
+             padding: EdgeInsets.only(
+              left: 16,
+              right: 16,
+              bottom: MediaQuery.of(context).padding.bottom + 16,
+              top: 16,
+            ),
              child: SizedBox(
               width: double.infinity,
               height: 50,

@@ -44,7 +44,7 @@ Mix/massage well until all the spices thoroughly coat the chicken.
 Let the chicken rest for 20 minutes 
 
 C. Prepare the Secret Masala Paste
-In a pressure cooker, combine all the ingredients listed under Secret Masala Paste (coriander bunch, green chillies, ginger, garlic, tomato, cashews, whole spices, mint, fenugreek leaves, rose petals, turmeric, soy sauce, oil, and water) =
+In a pressure cooker, combine all the ingredients listed under Secret Masala Paste (coriander bunch, green chillies, ginger, garlic, tomato, cashews, whole spices, mint, fenugreek leaves, rose petals, turmeric, soy sauce, oil, and water) 
 
 Cover the cooker and cook for 5 whistles 
 
@@ -61,7 +61,7 @@ Massage the chicken well to incorporate the cooked fenugreek aroma
 
 Add 150 ml of oil and mix for one minute 
 
-Add ghee and mix well (The video emphasizes using good quality ghee)
+Add ghee and mix well 
 
 The final marinade time should be a minimum of 3 to 4 hours 
 

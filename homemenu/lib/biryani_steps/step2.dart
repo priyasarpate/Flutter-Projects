@@ -40,13 +40,12 @@ class Step2 extends StatelessWidget {
                             ),
                           ),
                         );
-
                       },
                     ),
                   ),
 
                   const SizedBox(height: 16),
-                  
+
                   const Text(
                     'B. First Stage of Chicken Marination',
                     style: TextStyle(
@@ -55,29 +54,52 @@ class Step2 extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-              const SizedBox(height: 16),
-             Center(
-              child: const Text(
-                'Mix/massage well until all the spices thoroughly coat the chicken.',
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-              ),
-            ),
-            const SizedBox(height: 30),
+                  const SizedBox(height: 16),
+                  Center(
+                    child: const Text(
+                      'Mix/massage well until all the spices thoroughly coat the chicken.',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 30),
 
                   IngredientRow(icon: '🍗', name: 'chicken', quantity: '1 kg'),
                   IngredientRow(icon: '🧂', name: 'salt', quantity: '2 Tbsp'),
-                  IngredientRow(icon: '🌶️', name: 'red chili powder', quantity: '1.5 Tbsp'),
-                  IngredientRow(icon: '🧄', name: 'ginger-garlic paste', quantity: '1/2 tsp'),
-                  IngredientRow(icon: '🌿', name: 'chopped coriander leaves', quantity: '1/2 cup'),
-                  IngredientRow(icon: '🔥', name: 'prepared Chota Garam Masala', quantity: 'all'),
+                  IngredientRow(
+                    icon: '🌶️',
+                    name: 'red chili powder',
+                    quantity: '1.5 Tbsp',
+                  ),
+                  IngredientRow(
+                    icon: '🧄',
+                    name: 'ginger-garlic paste',
+                    quantity: '1/2 tsp',
+                  ),
+                  IngredientRow(
+                    icon: '🌿',
+                    name: 'chopped coriander leaves',
+                    quantity: '1/2 cup',
+                  ),
+                  IngredientRow(
+                    icon: '🔥',
+                    name: 'prepared Chota Garam Masala',
+                    quantity: 'all',
+                  ),
                   IngredientRow(icon: '🍋', name: 'lemon', quantity: '1'),
-
                 ],
               ),
             ),
             // --- FIXED BUTTON AREA ---
             Padding(
-              padding: const EdgeInsets.only(top: 16.0),
+              padding: EdgeInsets.only(
+                left: 16,
+                right: 16,
+                bottom: MediaQuery.of(context).padding.bottom + 16,
+                top: 16,
+              ),
               child: SizedBox(
                 width: double.infinity,
                 height: 50,
@@ -106,12 +128,11 @@ class Step2 extends StatelessWidget {
 }
 
 class IngredientRow extends StatelessWidget {
-
   final String icon;
   final String name;
   final String quantity;
 
-  const IngredientRow ({
+  const IngredientRow({
     super.key,
     required this.icon,
     required this.name,
@@ -120,24 +141,21 @@ class IngredientRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Row(
         children: [
-          Text(icon, style: TextStyle(fontSize: 24),),
-      
+          Text(icon, style: TextStyle(fontSize: 24)),
+
           const SizedBox(height: 16),
-      
-          Expanded(child: Text(name, style: TextStyle(fontSize: 16),)),
-      
+
+          Expanded(child: Text(name, style: TextStyle(fontSize: 16))),
+
           const SizedBox(height: 16),
-      
-          Text(quantity, style: TextStyle(fontSize: 16),)
-      
+
+          Text(quantity, style: TextStyle(fontSize: 16)),
         ],
       ),
     );
   }
-
 }
