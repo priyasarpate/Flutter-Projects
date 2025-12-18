@@ -1,37 +1,34 @@
+import 'package:eccomerce_ui/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:eccomerce_ui/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen ({super.key});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-      return Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                color: TColors.primary,
-                padding: EdgeInsets.all(0),
-                // let's create a shapes
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              color: TColors.primary,
+              padding: const EdgeInsets.all(0),
+              // let's create a shapes
+              child: SizedBox(
+                height: 400,
                 child: Stack(
-                  children: [
-                    Container(
-                    width: 400,
-                    height: 400,
-                    padding: const EdgeInsets.all(0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(400),
-                      color: TColors.textWhite.withOpacity(0.1),
-                    ),
-                    ),
-                  ],
+                 children: [
+                  Positioned(top: -150, right: -250, child: TCircularContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),
+                  Positioned(top: 100, right: -300, child: TCircularContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),           
+                 ],
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
-        
-      );
+      ),
+    );
   }
 }
+
