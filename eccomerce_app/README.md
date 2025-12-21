@@ -53,4 +53,4 @@
 18. Orders Screen 
 19. Sub - Categories Horizontal Product Scroll
 20. View all products
-21.  View all Brands & Brands SPEcific Products 
+21.  View all Brands & Brands SPEcific Products. 

@@ -90,3 +90,30 @@ Cook on high flame for exactly 5 minutes
 Place a heavy tawa/pan on the stove, set the biryani pot on top of it, and cook on dum for 20 minutes 
 
 Turn off the stove and let it rest for another 20 minutes before opening and mixing.
+
+## OTher Recipes
+This project is just tinkering around flutter building and having a recipe book. The home cooked recipes. 
+
+2. Lemon chicken gravy
+- Wash chicken 
+- add lemon in that 
+- in the pan add some ginger garlic paste, one chopped onion, some whole spieces, two whole red chilies, add that lemon chicken, mix it will add 1tbsp salt and turmeric. 
+- Let that chicken cook 
+- Until then prepare the main masala 
+- roasted onion, coriander branches, some coconut, let it rost in oil until turning brown 
+- grind that mixer 
+- now get some sarso oil 
+- add ginger garlic paste into it 
+- add one chopped green tomato  
+- add that mixer paste
+- add some red chilli powder
+- some masala 
+- add chicken and let it cook until it'll not separate the oil
+- 
+
+
+1. Hyderabadi biryani 
+
+2. Air fryer chicken 
+
+3. Air fryer fish 
