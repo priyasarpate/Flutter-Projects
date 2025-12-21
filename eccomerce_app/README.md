@@ -1,25 +1,24 @@
 # eccomerce_app
 
-A new Flutter project.
+### CORE CONCEPTS
 
-## Getting Started
+@ Expandable Project Structure
+@ Reusable Light & Dark Themes
+@ Modern & Minimal Design UI/UX
+@ Firebase Aauthentication
+@ Firebase Firestore
+@ Firebase Storage (images,icons and Videos)
+@ Share Preferences(Local Storage)
+@ GETX State managemet
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### FIVE SECTIONS TO CREATE FLUTTER ECCOMERCE APP
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+@ App Configuration 
+@ Login Design
+@ E-Store Design
+@ Login Backend
+@ E-Store Backend
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
-//flutter pub run flutter_native_splash:remove
-//flutter emulators --launch apple_ios_simulator   
 
-widgets 
-- TLoginHeader
-- TLoginForm
-- TFormDivider
-- TScocialButtons
